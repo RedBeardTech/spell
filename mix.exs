@@ -74,7 +74,7 @@ defmodule Spell.Mixfile do
     end
     ["test.all":  ["test.unit", "test.integration"],
      "test.unit": "test test/unit"] ++
-      ["spell.example.all": Map.keys(examples) |> Enum.map(&Atom.to_string/1)] ++
+      ["spell.example.all": Keyword.keys(examples) |> Enum.map(&Atom.to_string/1)] ++
       examples
   end
 
